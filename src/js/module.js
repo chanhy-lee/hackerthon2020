@@ -2,10 +2,10 @@
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
 // the link to your model provided by Teachable Machine export panel
-const pose_URL = "https://teachablemachine.withgoogle.com/models/09nqyf6SY/";
+const pose_URL = "https://teachablemachine.withgoogle.com/models/diF7X39-w/";
 let pose_model, webcam;
 
-const mask_URL = "https://teachablemachine.withgoogle.com/models/xc0Fgt-Z5/";
+const mask_URL = "https://teachablemachine.withgoogle.com/models/zEIjmS8SF/";
 let mask_model;
 
 let data;
