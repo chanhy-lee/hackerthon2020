@@ -199,7 +199,7 @@ async function predict() {
             if (mask_timeDiff >= 15) {
                 if (!sent) {
                     mask_count += 1;
-                    const beepSound = new Audio('C:/Users/danny/Desktop/hackerthon/work/src/mp3/beep.mp3');
+                    const beepSound = new Audio('./src/mp3/beep.mp3');
                     beepSound.play();
                 }
                 sent = true;
