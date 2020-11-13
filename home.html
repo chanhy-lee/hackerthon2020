@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./src/css/home.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700&display=swap');
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    </style>
+    <title>Personal Page</title>
+</head>
+<body>
+    <header></header>
+    <!-- Control Button -->
+    <div class="controlWrap" style="display: none;">
+        <div class="startBtn">START</div>
+        <div class="finishBtn">FINISH</div>
+    </div>
+    <!-- Timer -->
+    <div class="timerWrap js-timerWrap">
+        <form class="timer js-timer">
+            <input class="timer__min js-timer__min" type="number" id="timer__minute" min="1" />
+            <p>min</p>
+            <button>START</button>
+        </form>
+        <div class="leftTimeWrap js-leftTimeWrap"></div>
+        <div class="restartBtn js-restartBtn">RESTART</div>
+    </div>
+    <!-- Main -->
+    <main class="js-main">
+        <div class="poseWrap">
+            <h1 class="poseTitle">바른 자세 비율</h1>
+            <p class="poseRunTime js-poseRunTime"></p>
+            <div id="pie">
+                <canvas id="added" style="width: 500px; height: 500px;"></canvas>
+                <p>단위: s</p>
+            </div>
+        </div>
+        <div class="maskWrap">
+            <div>
+                <h1 class="maskTitle">마스크 15초 이상 벗은 횟수:</h1>
+                <div class="maskCount js-maskCount"></div>
+            </div>
+        </div>
+    </main>
+
+    <!--JavaScript-->
+    <script type="text/javascript" src="./src/js/send.js"></script>
+    <!-- Timer -->
+    <script type="text/javascript" src="./src/js/timer.js"></script>
+    <!-- Module -->
+    <script type="text/javascript" src="./src/js/module.js"></script>
+    <!--pose-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <!--mask-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <!-- Chart -->
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</body>
+</html>
